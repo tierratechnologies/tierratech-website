@@ -1,0 +1,40 @@
+baseURL: "https://tierratech.nz/"
+languageCode: "en-nz"
+title: "tierra technologies"
+theme: "spectral"
+
+params:
+  fancyTitle: "Tierra Technologies"
+  copyright: "Tierra Technologies Ltd"
+  description: "We develop tools<br />that focus on people<br />and delivering value<br />for new zealand"  
+  showStartButton: false
+  startbuttonText: "Activate"
+  startbuttonLink: "#"
+  body_is_markdown: false
+  menu:
+    enable: false
+    options:
+      - title: "Home"
+        url: "/"
+      - title: "Posts"
+        url: "/posts/"
+  banner:
+    enable: false
+    buttonText: "Start"
+    buttonLink: "#"
+  one:
+    enable: true
+    title: "Made in NZ"  
+    body: "We are a small team of kiwi's working hard to do our part to create a brighter future for New Zealand"
+  two:
+    enable: true
+    section:
+      - img: "images/icon-white-black.png"
+        title: "Logmate"
+        body: "An NZTA approved Electronic Work-time management system for all Drivers and Operators in New Zealand"
+        ctaLabel: "Find out more"
+        ctaURL: "https://logmate.co.nz"
+
+
+  #custom_css = "foo.css"
+  #images = ["path_to_social_image_for_link_previews.jpg"]
