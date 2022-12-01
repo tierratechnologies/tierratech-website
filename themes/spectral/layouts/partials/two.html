@@ -1,0 +1,24 @@
+{{ $md := .Site.Params.body_is_markdown | default false }}
+
+{{ with .Site.Params.two }}
+{{ if .enable }}
+<section id="two" class="wrapper alt style2">
+  {{ range .section }}
+	<section class="spotlight" style="background-color: black;">
+    <div class="image">
+        <img src="{{ .img | relURL }}" alt="" class="fit"/>
+    </div>
+    <div class="content">
+      <h2>{{ .title | safeHTML }}</h2>
+      {{ partial "body_text.html" (dict "context" . "md" $md) }}
+      {{ if and .ctaLabel .ctaURL }}
+		<ul class="actions special">
+      <li><a href="{{ .ctaURL }}" class="button primary" target="_blank">{{ .ctaLabel }}</a></li>
+		</ul>
+    {{ end }}
+		</div>
+	</section>
+  {{ end }}
+</section>
+{{ end }}
+{{ end }}
