@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+command = "hugo"
+
+[[redirects]]
+    from = "https://tierratechnz.netlify.com/*"
+    to = "https://tierratech.nz/:splat"
+    status = 301
