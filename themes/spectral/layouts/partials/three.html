@@ -13,9 +13,14 @@
       <li class="icon {{ .icon }}">
         <h3>{{ .title | safeHTML }}</h3>
         <p>{{ .body | safeHTML }}</p>
-			</li>
+		</li>      
       {{ end }}
 		</ul>
+      {{ if and .ctaLabel .ctaURL }}
+		<ul class="actions">
+         <li><a href="{{ .ctaURL }}" class="button" target="_blank">{{ .ctaLabel }}</a></li>
+		</ul>
+      {{ end }}
 	</div>
 </section>
 {{ end }}

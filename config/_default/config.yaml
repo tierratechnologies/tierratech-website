@@ -1,16 +1,16 @@
 baseURL: "https://tierratech.nz/"
 languageCode: "en-nz"
-title: "tierra technologies"
+title: "Tierra Technologies New Zealand"
 theme: "spectral"
 
 params:
   fancyTitle: "Tierra Technologies"
   copyright: "Tierra Technologies Ltd"
-  description: "We develop tools<br />that focus on people<br />and delivering value<br />for new zealand"  
+  description: "We develop tools <br />that focus on people <br /> and delivering value <br />for new zealand"  
   showStartButton: false
   startbuttonText: "Activate"
   startbuttonLink: "#"
-  body_is_markdown: false
+  body_is_markdown: true
   menu:
     enable: false
     options:
@@ -25,7 +25,7 @@ params:
   one:
     enable: true
     title: "Made in NZ"  
-    body: "We are a small team of kiwi's working hard to do our part to create a brighter future for New Zealand"
+    body: "We are a small team of Kiwi's working hard to do our part to create a brighter future for New Zealand"
   two:
     enable: true
     section:
@@ -34,6 +34,15 @@ params:
         body: "An NZTA approved Electronic Work-time management system for all Drivers and Operators in New Zealand"
         ctaLabel: "Find out more"
         ctaURL: "https://logmate.co.nz"
+        bgColor: "black"      
+  three:
+    enable: true    
+    title: "Regula"
+    body: "It's time online payments got real!"
+    ctaLabel: "Watch this space"
+    ctaURL: "https://regula.nz"
+    bgColor: "white"
+
 
 
   #custom_css = "foo.css"
