@@ -432,7 +432,6 @@ async function start() {
   );
   ring.after(canvas);
   circle.classList.add('has-globe');
-  document.querySelector('.hero__hint')?.removeAttribute('hidden');
   new ResizeObserver(measure).observe(circle);
   measure();
 
