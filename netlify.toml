@@ -1,8 +1,9 @@
 [build]
-publish = "public"
-command = "hugo"
+publish = "build/jaspr"
+command = "bash scripts/netlify-build.sh"
 
 [[redirects]]
-    from = "https://tierratechnz.netlify.com/*"
+    from = "https://tierratechnz.netlify.app/*"
     to = "https://tierratech.nz/:splat"
     status = 301
+    force = true

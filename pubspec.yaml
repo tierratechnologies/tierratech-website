@@ -1,0 +1,20 @@
+name: tierra_website
+description: The Tierra Technologies website.
+version: 1.0.0
+publish_to: none
+
+environment:
+  # Jaspr 0.23 build tooling does not yet resolve on Dart 3.14.
+  sdk: ">=3.13.0 <3.14.0"
+
+dependencies:
+  jaspr: 0.23.5
+
+dev_dependencies:
+  build_runner: ^2.15.1
+  build_web_compilers: ^4.8.5
+  jaspr_builder: 0.23.5
+  lints: ^5.0.0
+
+jaspr:
+  mode: static
