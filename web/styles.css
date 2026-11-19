@@ -161,8 +161,6 @@ h2 { font-size: clamp(38px, 4.6vw, 64px); line-height: 1.02; }
 }
 .hero__circle canvas:focus-visible { outline: 2px solid var(--white); outline-offset: -5cqw; }
 .hero__circle h1, .hero__marker { z-index: 1; pointer-events: none; }
-.hero__intro .hero__hint { margin-top: 16px; color: var(--muted-on-dark); font-size: 14px; }
-.hero__intro .hero__hint[hidden] { display: none; }
 .hero__intro { flex: 1 1 300px; padding-bottom: clamp(0px, 5vw, 64px); }
 .hero__intro p { font-size: clamp(20px, 1.9vw, 25px); line-height: 1.4; }
 
@@ -201,6 +199,11 @@ h2 { font-size: clamp(38px, 4.6vw, 64px); line-height: 1.02; }
 .panel--people { background: var(--charcoal); color: var(--white); }
 .panel--technology { background: var(--white); }
 .panel__specks { position: absolute; top: -16%; right: -20%; width: min(62%, 420px); }
+/* The profile is cropped by the card's edges, like the ring in the card beside it. */
+.panel__specks--profile { top: -3%; right: -10%; width: min(56%, 390px); }
+@media (min-width: 960px) {
+  .panel__specks--profile { top: auto; bottom: -5%; }
+}
 .panel__label { position: relative; max-width: 150px; font-size: 15px; font-weight: 500; line-height: 1.35; }
 .panel__list {
   position: relative;
@@ -238,8 +241,8 @@ h2 { font-size: clamp(38px, 4.6vw, 64px); line-height: 1.02; }
 }
 .tool:first-of-type { border-top: 2px solid var(--charcoal); }
 .tool:last-of-type { border-bottom: 1px solid var(--line); }
-.tool__logo { justify-self: start; max-width: 100%; padding: 28px 32px; border-radius: 14px; background: #000; }
-.tool__logo img { width: 190px; }
+.tool__logo { display: flex; justify-content: center; justify-self: start; width: 254px; max-width: 100%; padding: 28px 32px; border-radius: 14px; background: #000; }
+.tool__logo img { width: auto; height: 46px; mix-blend-mode: screen; }
 .tool__name { font-family: var(--font-display); font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
 .tool__description { font-size: 20px; line-height: 1.45; }
 .tool__link { display: inline-flex; align-items: center; justify-self: start; min-height: 44px; font-weight: 600; }

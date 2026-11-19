@@ -11,28 +11,40 @@ class Strengths extends StatelessComponent {
       classes: 'strengths wrap',
       attributes: {'aria-label': 'What people bring and what technology brings'},
       [
-        _panel('People bring', const ['Judgement', 'Context', 'Care', 'The final call'], 'panel--people'),
+        _panel(
+          'People bring',
+          const ['Judgement', 'Context', 'Care', 'Genuine ideas'],
+          'panel--people',
+          // A stippled profile of a person, in the style of the logo's speckled ring.
+          img(
+            classes: 'panel__specks panel__specks--profile',
+            src: '/images/people-profile-white.svg',
+            alt: '',
+            width: 1000,
+            height: 1270,
+            loading: MediaLoading.lazy,
+          ),
+        ),
         _panel(
           'Technology and AI bring',
-          const ['Speed', 'Memory', 'Patience', 'The first draft'],
+          const ['Speed', 'Memory', 'Patience', 'Incredible power'],
           'panel--technology',
-          decorated: true,
+          img(
+            classes: 'panel__specks',
+            src: '/images/tierra-specks-black.svg',
+            alt: '',
+            width: 1000,
+            height: 1000,
+            loading: MediaLoading.lazy,
+          ),
         ),
       ],
     );
   }
 
-  Component _panel(String label, List<String> items, String modifier, {bool decorated = false}) {
+  Component _panel(String label, List<String> items, String modifier, Component decoration) {
     return div(classes: 'panel $modifier', [
-      if (decorated)
-        img(
-          classes: 'panel__specks',
-          src: '/images/tierra-specks-black.svg',
-          alt: '',
-          width: 1000,
-          height: 1000,
-          loading: MediaLoading.lazy,
-        ),
+      decoration,
       p(classes: 'panel__label', [.text(label)]),
       ul(classes: 'panel__list', [
         for (final item in items) li([.text(item)]),

@@ -15,7 +15,7 @@ class ToolsList extends StatelessComponent {
           if (tool.logo case final logo?)
             div(classes: 'tool__logo', [
               h3([
-                img(src: logo, alt: tool.name, width: 190, height: 45),
+                img(src: logo, alt: tool.name, width: 190, height: tool.logoHeight),
               ]),
             ])
           else

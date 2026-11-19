@@ -28,8 +28,6 @@ class Hero extends StatelessComponent {
           ),
         ]),
         a(classes: 'button', href: '#tools', [.text('See our tools')]),
-        // Revealed by globe.js once the globe is ready.
-        p(classes: 'hero__hint', attributes: {'hidden': ''}, [.text('Drag the globe to spin it.')]),
       ]),
     ]);
   }

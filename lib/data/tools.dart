@@ -6,6 +6,7 @@ class Tool {
     required this.linkLabel,
     required this.url,
     this.logo,
+    this.logoHeight = 45,
   });
 
   final String name;
@@ -15,6 +16,9 @@ class Tool {
 
   /// Optional logo, shown on a black tile in place of the product name.
   final String? logo;
+
+  /// The logo's height when it is 190 wide.
+  final int logoHeight;
 }
 
 const tools = [
@@ -31,5 +35,7 @@ const tools = [
     description: "It's time online payments got real.",
     linkLabel: 'Watch this space',
     url: 'https://regula.nz',
+    logo: '/images/regula-white.svg',
+    logoHeight: 56,
   ),
 ];
